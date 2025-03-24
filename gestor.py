@@ -42,7 +42,7 @@ def get_next_id():
 def add_alumne(data: AlumneCreate):
     alumnes = read_alumnes()
     new_id = get_next_id()
-    alumne_data = data.dict()
+    alumne_data = data.model_dump()
     alumne_data["id"] = new_id
     alumnes.append(alumne_data)
     with open(FILE_PATH, "w", encoding="utf-8") as f:
