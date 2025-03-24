@@ -8,14 +8,16 @@ class Data(BaseModel):
     mes: Optional[int] = None
     any: Optional[int] = None
 
-class Alumne(BaseModel):
-    id: int
+class AlumneCreate(BaseModel):
     nom: str = ""
     cognom: str = ""
     data: Data
     email: str = ""
     feina: bool = False
     curs: str = ""
+
+class Alumne(AlumneCreate):
+    id: int
 
 FILE_PATH = "alumnes.json"
 
@@ -24,23 +26,27 @@ def create_JSON():
         with open (FILE_PATH, "w", encoding="utf-8") as f:
             json.dump([], f, indent=4)
 
+def read_alumnes():
+    create_JSON()
+    with open(FILE_PATH, "r", encoding="utf-8") as f:
+        return json.load(f)
+
 def get_next_id():
-    alumnes = read_alumnes()  # Get current list of alumnes
+    alumnes = read_alumnes()
     if alumnes:
-        # Find the highest id and return the next one
         max_id = max([alumne["id"] for alumne in alumnes])
         return max_id + 1
     else:
         return 1
+    
+def add_alumne(data: AlumneCreate):
+    alumnes = read_alumnes()
+    new_id = get_next_id()
+    alumne_data = data.dict()
+    alumne_data["id"] = new_id
+    alumnes.append(alumne_data)
+    with open(FILE_PATH, "w", encoding="utf-8") as f:
+        json.dump(alumnes, f, indent=4)
 
 def get_JSON():
-    create_JSON()
-    with open(FILE_PATH, "r", encoding="utf-8") as f:
-        data = json.load(f)
-    return data
-
-def add_alumne(Alumne: dict):
-    data = get_JSON()
-    data.append(Alumne)
-    with open(FILE_PATH, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=4)
+    return read_alumnes()

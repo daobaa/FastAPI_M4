@@ -1,21 +1,7 @@
 [
     {
-        "id": 0,
-        "nom": "Diego",
-        "cognom": "Olivera",
-        "data": {
-            "dia": 28,
-            "mes": 11,
-            "any": 2003
-        },
-        "email": "diego@gmail.com",
-        "feina": false,
-        "curs": "2n"
-    },
-    {
-        "id": 2,
-        "nom": "d",
-        "cognom": "d",
+        "nom": "IAUHDAYWA",
+        "cognom": "",
         "data": {
             "dia": 0,
             "mes": 0,
@@ -23,6 +9,7 @@
         },
         "email": "",
         "feina": false,
-        "curs": ""
+        "curs": "",
+        "id": 1
     }
 ]

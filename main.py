@@ -12,6 +12,6 @@ def get_file():
     return get_JSON
 
 @app.post("/alumne/", response_model=Alumne)
-def add_new(alumne: Alumne):
-    add_alumne(alumne.model_dump())
+def add_new(alumne: AlumneCreate):
+    add_alumne(alumne)
     return alumne
