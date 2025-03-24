@@ -7,10 +7,6 @@ app = FastAPI()
 def index():
     return("Institut TIC de Barcelona")
 
-@app.get("/JSON/")
-def get_file():
-    return get_JSON
-
 @app.post("/alumne/", response_model=Alumne)
 def add_new(alumne: AlumneCreate):
     add_alumne(alumne)
