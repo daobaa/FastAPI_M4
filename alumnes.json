@@ -1,15 +1,67 @@
 [
     {
-        "nom": "IAUHDAYWA",
-        "cognom": "",
+        "nom": "Diego",
+        "cognom": "Olivera",
         "data": {
-            "dia": 0,
-            "mes": 0,
-            "any": 0
+            "dia": 28,
+            "mes": 11,
+            "any": 2003
         },
-        "email": "",
+        "email": "diego@iticbcn.cat",
         "feina": false,
-        "curs": "",
+        "curs": "1er DAW",
         "id": 1
+    },
+    {
+        "nom": "Luis",
+        "cognom": "Olivera",
+        "data": {
+            "dia": 26,
+            "mes": 12,
+            "any": 2012
+        },
+        "email": "luis@iticbcn.cat",
+        "feina": false,
+        "curs": "1er DAW",
+        "id": 2
+    },
+    {
+        "nom": "Alexa",
+        "cognom": "Olivera",
+        "data": {
+            "dia": 2,
+            "mes": 2,
+            "any": 2002
+        },
+        "email": "alexa@iticbcn.cat",
+        "feina": true,
+        "curs": "1er DAM",
+        "id": 3
+    },
+    {
+        "nom": "Xavier",
+        "cognom": "Olivera",
+        "data": {
+            "dia": 5,
+            "mes": 9,
+            "any": 1995
+        },
+        "email": "xavier@iticbcn.cat",
+        "feina": false,
+        "curs": "2n ASIX",
+        "id": 4
+    },
+    {
+        "nom": "Maria",
+        "cognom": "Olivera",
+        "data": {
+            "dia": 29,
+            "mes": 12,
+            "any": 2004
+        },
+        "email": "maria@iticbcn.cat",
+        "feina": false,
+        "curs": "1er ASIX",
+        "id": 5
     }
 ]

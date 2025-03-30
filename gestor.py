@@ -50,3 +50,22 @@ def add_alumne(data: AlumneCreate):
 
 def get_JSON():
     return read_alumnes()
+
+def get_alumne_by_id(alumne_id: int):
+    alumnes = read_alumnes()
+    for alumne in alumnes:
+        if alumne["id"] == alumne_id:
+            return alumne
+    return None
+
+def delete_alumne_by_id(alumne_id: int):
+    alumnes = read_alumnes()
+    updated_alumnes = [alumne for alumne in alumnes if alumne["id"] != alumne_id]
+
+    if len(updated_alumnes) == len(alumnes):
+        return False
+
+    with open(FILE_PATH, "w", encoding="utf-8") as f:
+        json.dump(updated_alumnes, f, indent=4)
+
+    return True
